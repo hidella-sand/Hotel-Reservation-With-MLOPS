@@ -1,0 +1,184 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1d3557, #457b9d, #a8dadc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Container styling */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.01);
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    font-size: 1rem;
+    color: #f1f1f1;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Input, select, and date field styling */
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown options styling */
+select option {
+    background-color: #1d3557;
+    color: #fff;
+}
+
+input[type="number"]::placeholder,
+input[type="date"]::placeholder {
+    color: #eee;
+}
+
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #a8dadc;
+    box-shadow: 0 0 8px rgba(168, 218, 220, 0.6);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #457b9d, #1d3557);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #1d3557, #457b9d);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Result section styling */
+.result {
+    margin-top: 30px;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: glowFade 1.5s ease;
+}
+
+/* Optional glow/fade animation */
+@keyframes glowFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(0, 255, 200, 0.2);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.01);
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(0, 255, 200, 0.3);
+    }
+}
+
+/* Result message styling */
+.result p {
+    margin: 0;
+    font-size: 1.4rem;
+    display: inline-block;
+}
+
+/* Status coloring with icons */
+.result p.cancel {
+    color: #ff4d4d;
+}
+
+.result p.not-cancel {
+    color: #00ffc8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
