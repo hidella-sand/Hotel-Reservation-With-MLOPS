@@ -27,7 +27,6 @@ This project builds a robust machine learning pipeline to predict whether a hote
 
 ---
 
-**```markdown
 ```mermaid
 graph TD;
     A[Google Cloud CSV] --> B[Data Ingestion]
@@ -38,7 +37,7 @@ graph TD;
     F --> G[LightGBM Training]
     G --> H[MLflow Logging]
     H --> I[Flask Web App]
-    I --> J[Docker + Jenkins]**
+    I --> J[Docker + Jenkins]
 
 
 ## 🧠 What's Happening Inside Each Stage
