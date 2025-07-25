@@ -23,5 +23,19 @@ pipeline {
                 }
             }
         }
+
+        stage('Setting up our virtual env and dependencies') {
+            steps {
+                script {
+                    echo 'Setting up our virtual env and dependencies'
+                    sh '''
+                    python -m venv ${VENV_DIR}
+                    . ${VENV_DIR}/bin/activate
+                    pip install --upgrade pip
+                    pip install -e .
+                    '''
+                }
+            }
+        }
     }
 }
