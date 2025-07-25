@@ -39,7 +39,6 @@ graph TD;
     H --> I[Flask Web App]
     I --> J[Docker + Jenkins]
 
-
 ## 🧠 What's Happening Inside Each Stage
 
 ### 1️⃣ Data Ingestion
