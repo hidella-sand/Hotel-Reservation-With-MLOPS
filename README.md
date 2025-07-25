@@ -29,7 +29,6 @@ This project builds a robust machine learning pipeline to predict whether a hote
 
 # Machine Learning Pipeline
 
-```mermaid
 graph TD;
     A[Google Cloud CSV] --> B[Data Ingestion]
     B --> C[Train/Test Split]
